@@ -1,6 +1,6 @@
 /*
  * main.c
- *!!!!NOT WORKING !!!!
+ *!!!!WORKING !!!!
  *
  * weighted directed graph stored in a file gives 6 parameters from the command
  * DFS and find path in a graph !
@@ -151,6 +151,7 @@ node_t *create_node(node_t **head,char *value){
 	new_node->traversed=0;
 	tmp=new_node;
 	new_node->next=*head;
+	*head=tmp;
 	return tmp;
 }
 edge_t *create_edge(edge_t *head,node_t *dest,int w){
